@@ -1,18 +1,24 @@
-import Button from "react-bootstrap/esm/Button"
+import Button from "react-bootstrap/esm/Button";
 
-const ItemColors = () => {
+const ItemColors = ({ color }) => {
 
-  const color = "bg-red-600 h-[150px] w-[100%] "
+  const colorrr = color;
+  const colorStyle = {
+    backgroundColor: colorrr,
+    height: "150px",
+    width: "100%",
+  };
+  console.log(colorStyle)
 
   return (
     <>
-    <div className="flex flex-col w-[10%] justify-center items-center gap-2 border p-3 rounded-md bg-slate-300 m-3">
-      <h2>Color: (Nombre de color)</h2>
-      <div className={color}></div>
-      <Button className="p-3 bg-red-600 rounded-md w-[100%]">Eliminar</Button>
-    </div>
+      <div className="flex flex-col w-[10%] justify-evenly items-center gap-2 border p-3 rounded-md bg-slate-500 m-3">
+        <h2 className="w-[5ch]">Color: {color}</h2>
+        <div  style={colorStyle}></div>
+        <Button className="p-3 bg-red-600 rounded-md w-[100%]">Eliminar</Button>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default ItemColors
+export default ItemColors;

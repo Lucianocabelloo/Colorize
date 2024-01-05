@@ -1,7 +1,7 @@
 
 import './App.css'
 import FormColors from './Components/FormColors'
-import ListColors from './Components/listColors'
+
 
 function App() {
 
@@ -14,7 +14,6 @@ function App() {
       </header>
       <main className=' flex-grow'>
         <FormColors/>
-        <ListColors/>
       </main>
       <footer>
         <footer>Footer</footer>
