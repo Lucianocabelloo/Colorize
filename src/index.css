@@ -5,6 +5,13 @@
 body{
   width: 100%;
   height: 100vh;
-  background-color: rgb(34, 33, 33);
+  background-color: rgb(37, 37, 37);
 }
 
+.estilo{
+  background-color: rgb(241, 245, 249) !important;
+  margin: 50px 0px;
+  height: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}

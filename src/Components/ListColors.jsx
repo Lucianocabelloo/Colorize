@@ -3,7 +3,7 @@ import ItemColors from './ItemColors'
 
 const ListColors = () => {
   return (
-    <div>
+    <div className='w-[100%] h-[100%] bg-red-500 estilo'>
         <ItemColors/>
     </div>
   )
