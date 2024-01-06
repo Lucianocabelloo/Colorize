@@ -1,21 +1,24 @@
+/* eslint-disable react/prop-types */
 import Button from "react-bootstrap/esm/Button";
 
-const ItemColors = ({ color }) => {
+const ItemColors = ({ color, handleDelete, index }) => {
 
-  const colorrr = color;
+  const AdminColor = color;
   const colorStyle = {
-    backgroundColor: colorrr,
+    backgroundColor: AdminColor,
     height: "150px",
     width: "100%",
   };
   console.log(colorStyle)
+
+
 
   return (
     <>
       <div className="flex flex-col w-[10%] justify-evenly items-center gap-2 border p-3 rounded-md bg-slate-500 m-3">
         <h2 className="w-[5ch]">Color: {color}</h2>
         <div  style={colorStyle}></div>
-        <Button className="p-3 bg-red-600 rounded-md w-[100%]">Eliminar</Button>
+        <Button onClick={() => handleDelete(index)} className="p-3 bg-red-600 rounded-md w-[100%]">Eliminar</Button>
       </div>
     </>
   );

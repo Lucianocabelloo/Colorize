@@ -7,7 +7,7 @@ import ListColors from './listColors';
 const FormColors = () => {
 
   const [color, setColor] = useState([])
-  const [colorPicker, setColorPicker] = useState("")
+
   const [change, setChange] = useState("")
 
   const handleChange = (e) => {
@@ -27,7 +27,15 @@ const FormColors = () => {
     const target = e.target.value
     setChange(target)
   }
-  console.log(colorPicker)
+
+  const handleDelete = (index) => {
+    const updatedColors = [...color];
+    updatedColors.splice(index, 1);
+    setColor(updatedColors);
+
+  };
+  
+
 
 
 
@@ -59,7 +67,7 @@ const FormColors = () => {
     </Button>
   </Form>
         </div>
-                <ListColors colors={color}/>
+                <ListColors colors={color} handleDelete={handleDelete} />
         </>
   )
 }
