@@ -41,9 +41,9 @@ const FormColors = () => {
 
   return (
     <>
-    <section>
+    <section className='flex gap-8'>
 
-      <div className='flex flex-col justify-center items-center bg-slate-100 p-3 rounded-md'>
+      <div className='flex flex-col justify-center items-center bg-slate-100 p-3 rounded-md w-[100%] borde'>
         <h2 className=' text-2xl font-semibold'>Administrar colores</h2>
 
       <Form onSubmit={handleAddColor} className='flex gap-5 items-center w-[100%] justify-evenly'>
@@ -60,7 +60,7 @@ const FormColors = () => {
 
     </Form.Group>
     <Form.Group className='flex gap-5'>
-      <Form.Control onChange={handleChange} value={change} type="text" className='w-[30vw] p-3 rounded-md' placeholder="Ingrese el color" />
+      <Form.Control onChange={handleChange} value={change} type="text" className='w-[30vw] p-3 rounded-md' placeholder="Ingrese el color en ingles" />
     </Form.Group>
 
     <Button className=' bg-orange-600 p-3 rounded-md' type="submit">
