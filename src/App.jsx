@@ -13,8 +13,7 @@ function App() {
         <h1>Header</h1>
       </header>
       <main className=' flex-grow'>
-        <FormColors/>
-      </main>
+        <FormColors/>      </main>
       <footer>
         <footer>Footer</footer>
       </footer>

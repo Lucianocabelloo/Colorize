@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import FormImage from './FormImage';
 import ListColors from './listColors';
 
 
@@ -9,7 +10,6 @@ const FormColors = () => {
   const [color, setColor] = useState([])
 
   const [change, setChange] = useState("")
-
   const handleChange = (e) => {
     e.preventDefault()
     const target = e.target.value
@@ -32,7 +32,6 @@ const FormColors = () => {
     const updatedColors = [...color];
     updatedColors.splice(index, 1);
     setColor(updatedColors);
-
   };
   
 
@@ -42,7 +41,9 @@ const FormColors = () => {
 
   return (
     <>
-      <div className='flex flex-col justify-center items-center bg-slate-100'>
+    <section>
+
+      <div className='flex flex-col justify-center items-center bg-slate-100 p-3 rounded-md'>
         <h2 className=' text-2xl font-semibold'>Administrar colores</h2>
 
       <Form onSubmit={handleAddColor} className='flex gap-5 items-center w-[100%] justify-evenly'>
@@ -67,7 +68,15 @@ const FormColors = () => {
     </Button>
   </Form>
         </div>
+
+      <FormImage/>
+
+        </section>
+    
+
+        <div>
                 <ListColors colors={color} handleDelete={handleDelete} />
+        </div>
         </>
   )
 }
