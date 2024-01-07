@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import FormImage from './FormImage';
@@ -6,10 +6,13 @@ import ListColors from './listColors';
 
 
 const FormColors = () => {
+  const storedColors = JSON.parse(localStorage.getItem("Colours")) || [];
 
-  const [color, setColor] = useState([])
-
+  const [color, setColor] = useState(storedColors)
   const [change, setChange] = useState("")
+
+
+
   const handleChange = (e) => {
     e.preventDefault()
     const target = e.target.value
@@ -33,10 +36,14 @@ const FormColors = () => {
     updatedColors.splice(index, 1);
     setColor(updatedColors);
   };
+
+  useEffect(() => {
+    localStorage.setItem("Colours", JSON.stringify(color));
+  }, [color]);
   
 
 
-
+  
 
 
   return (
