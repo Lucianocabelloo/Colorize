@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import FormImage from "./FormImage";
-import ListColors from "./listColors";
+import ListColors from "./ListColors";
 
 const FormColors = () => {
   const storedColors = JSON.parse(localStorage.getItem("Colours")) || [];
